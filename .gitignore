@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/plain-react
+plain-react.so
+plain-react.dylib
+plain-react.dll
+plain-react.a
+plain-react.lib
+plain-react-test-*
+*.exe
+*.o
+*.obj
+*.lst

@@ -1,0 +1,5 @@
+name "plain-react"
+description "Plain-React web application with Vibe-D."
+authors "sozel"
+copyright "Copyright © 2020, sozel"
+license "proprietary"
