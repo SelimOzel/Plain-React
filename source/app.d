@@ -1,4 +1,4 @@
-import std.stdio;
+module app;
 
 import vibe.http.server;
 import vibe.http.fileserver;
@@ -11,7 +11,15 @@ void showHome(HTTPServerRequest req, HTTPServerResponse res)
 	res.redirect("/plain-react.html");
 }
 
-void main()
+shared static this()
 {
-	writeln("Edit source/app.d to start your project.");
+	auto router = new URLRouter;
+	router.get("/", &showHome);
+	router.get("*", serveStaticFiles("public"));
+
+	auto settings = new HTTPServerSettings;
+	settings.bindAddresses = ["127.0.0.1"];
+	settings.port = 8080;
+
+	listenHTTP(settings, router);
 }
