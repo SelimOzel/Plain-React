@@ -13,3 +13,5 @@ plain-react-test-*
 *.o
 *.obj
 *.lst
+*.dll
+*.selections.json
