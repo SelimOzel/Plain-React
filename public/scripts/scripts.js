@@ -21,17 +21,17 @@ window.onload = function()
         Contents()
         {
             var contentsHolder = React.createElement('ul', {className:"nav navbar-nav navbar-right"}, [
-                this.SingleContent('Link 1'), 
-                this.SingleContent('Link 2'), 
-                this.SingleContent('Link 3'), 
-                this.SingleContent('Link 4'), 
-                this.SingleContent('Link 5')]);
+                this.SingleContent('Link 1', "/Page1"), 
+                this.SingleContent('Link 2', "/Page2"), 
+                this.SingleContent('Link 3', "/Page3"), 
+                this.SingleContent('Link 4', "/Page4"), 
+                this.SingleContent('Link 5', "/Page5")]);
             return contentsHolder;
         }
 
-        SingleContent(linkName_IN)
+        SingleContent(linkName_IN, linkReference_IN)
         {
-            var link1 = React.createElement('a', {className:"nav-link", href: "#"}, linkName_IN);
+            var link1 = React.createElement('a', {className:"nav-link", href: linkReference_IN}, linkName_IN);
             return React.createElement('li', {className:"nav-item"}, link1);
         }
     }
