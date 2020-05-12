@@ -14,13 +14,13 @@ window.onload = function()
 
         Header()
         {
-            var headerContent = React.createElement('a', {className:"navbar-brand", href: "#"}, 'Web Site Name');
-            return React.createElement('div', {className:"navbar-header"}, headerContent);
+            var headerContent = React.createElement('a', {key: "navbarName", className:"navbar-brand", href: "/"}, 'Web Site Name');
+            return React.createElement('div', {key: "navbarNameDiv", className:"navbar-header"}, headerContent);
         }
 
         Contents()
         {
-            var contentsHolder = React.createElement('ul', {className:"nav navbar-nav navbar-right"}, [
+            var contentsHolder = React.createElement('ul', {key: "righHandSideLinks", className:"nav navbar-nav navbar-right"}, [
                 this.SingleContent('Link 1', "/Page1"), 
                 this.SingleContent('Link 2', "/Page2"), 
                 this.SingleContent('Link 3', "/Page3"), 
@@ -31,8 +31,8 @@ window.onload = function()
 
         SingleContent(linkName_IN, linkReference_IN)
         {
-            var link1 = React.createElement('a', {className:"nav-link", href: linkReference_IN}, linkName_IN);
-            return React.createElement('li', {className:"nav-item"}, link1);
+            var link1 = React.createElement('a', {key: linkReference_IN, className:"nav-link", href: linkReference_IN}, linkName_IN);
+            return React.createElement('li', {key: linkName_IN, className:"nav-item"}, link1);
         }
     }
 
