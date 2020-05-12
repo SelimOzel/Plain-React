@@ -1,4 +1,4 @@
 # Plain-React
-React hello world without any other dependencies.
+Plain react-bootstrap web site with a navigation bar. The plain-react.html can be run as a stand-alone page from a browser. 
 
-Quite simple to understand. The plain-react.html can be viewed in any web browser. It accesses unpkg for content delivery and grabs the Greetings class from the scripts file.
+It also comes with a vibe-d web application. Just run ```dub run -a x86_mscoff``` on a Windows 10 machine to start server at ```http://127.0.0.1:8080/```. Dub command might vary based on platform.
