@@ -4,7 +4,7 @@ window.onload = function()
     {
         render()
         {
-            return React.createElement('nav', {key: "navigationBar", className:"navbar navbar-expand-sm bg-dark"}, this.Container());
+            return React.createElement('nav', {className:"navbar navbar-expand-sm bg-dark"}, this.Container());
         }
 
         Container()
@@ -40,12 +40,12 @@ window.onload = function()
     {
         render()
         {
-            return React.createElement('div', {key: "mainView", className:"bg"}, []);
+            return React.createElement('div', {className:"bg"}, []);
         }        
     }    
 
     ReactDOM.render(
-        [React.createElement(NavigationBar), React.createElement(Background)],
+        [React.createElement(NavigationBar, {key: "navigationBar"}), React.createElement(Background, {key: "mainView"})],
         document.getElementById('root')
     );
 };
