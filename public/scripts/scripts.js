@@ -4,7 +4,7 @@ window.onload = function()
     {
         render()
         {
-            return React.createElement('nav', {className:"navbar navbar-expand-sm bg-dark"}, this.Container());
+            return React.createElement('nav', {key: "navigationBar", className:"navbar navbar-expand-sm bg-dark"}, this.Container());
         }
 
         Container()
@@ -36,8 +36,16 @@ window.onload = function()
         }
     }
 
+    class Background extends React.Component
+    {
+        render()
+        {
+            return React.createElement('div', {key: "mainView", className:"bg"}, []);
+        }        
+    }    
+
     ReactDOM.render(
-        React.createElement(NavigationBar),
+        [React.createElement(NavigationBar), React.createElement(Background)],
         document.getElementById('root')
     );
 };

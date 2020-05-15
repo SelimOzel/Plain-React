@@ -24,6 +24,8 @@ shared static this()
 	router.get("/Page4", staticRedirect("/Page4.html"));
 	router.get("/Page5", staticRedirect("/Page5.html"));
 	router.get("*", serveStaticFiles("public"));
+	router.get("*", serveStaticFiles("public/images"));
+	router.get("*", serveStaticFiles("public/styles"));
 
 	auto settings = new HTTPServerSettings;
 	settings.bindAddresses = ["127.0.0.1"];
