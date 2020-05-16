@@ -4,7 +4,7 @@ window.onload = function()
     {
         render()
         {
-            return React.createElement('nav', {className:"navbar navbar-expand-sm bg-dark"}, this.Container());
+            return React.createElement('nav', {className:"pt-0 pb-0 navbar navbar-expand-sm bg-dark"}, this.Container());
         }
 
         Container()

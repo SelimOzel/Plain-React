@@ -1,5 +1,7 @@
-.bg {
-  /* Background Address */
+/* Background */
+.bg 
+{
+  /* Address */
   background-image: url('../images/Background.png');
 
   /* Center and scale the image nicely */
@@ -7,5 +9,6 @@
   background-size: cover;
 }
 
-.div_hover { background-color: #343A40; }
-.div_hover:hover { background-color: #C2CFDA; }
+/* Division Hover */
+.div_hover 			{ background-color: #343A40; }
+.div_hover:hover 	{ background-color: #EEF1F4; }
