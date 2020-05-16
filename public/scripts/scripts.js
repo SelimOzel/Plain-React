@@ -32,7 +32,7 @@ window.onload = function()
         SingleContent(linkName_IN, linkReference_IN)
         {
             var link1 = React.createElement('a', {key: linkReference_IN, className:"nav-link", href: linkReference_IN}, linkName_IN);
-            return React.createElement('li', {key: linkName_IN, className:"nav-item div_hover"}, link1);
+            return React.createElement('li', {key: linkName_IN, className:"py-4 pr-5 pl-5 nav-item div_hover"}, link1);
         }
     }
 
