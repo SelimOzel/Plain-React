@@ -14,18 +14,18 @@ window.onload = function()
 
         Header()
         {
-            var headerContent = React.createElement('a', {key: "navbarName", className:"navbar-brand", href: "/"}, 'Web Site Name');
+            var headerContent = React.createElement('a', {key: "navbarName", className:"navbar-brand", href: "/"}, 'Misty Haven');
             return React.createElement('div', {key: "navbarNameDiv", className:"navbar-header"}, headerContent);
         }
 
         Contents()
         {
             var contentsHolder = React.createElement('ul', {key: "righHandSideLinks", className:"nav navbar-nav navbar-right"}, [
-                this.SingleContent('Link 1', "/Page1"), 
-                this.SingleContent('Link 2', "/Page2"), 
-                this.SingleContent('Link 3', "/Page3"), 
-                this.SingleContent('Link 4', "/Page4"), 
-                this.SingleContent('Link 5', "/Page5")]);
+                this.SingleContent('Buffet', "/Buffet"), 
+                this.SingleContent('Spitznagel', "/Spitznagel"), 
+                this.SingleContent('Simons', "/Simons"), 
+                this.SingleContent('Munger', "/Munger"), 
+                this.SingleContent('Musashi', "/Musashi")]);
             return contentsHolder;
         }
 
@@ -40,8 +40,46 @@ window.onload = function()
     {
         render()
         {
-            var textBox = React.createElement('p', {className: "text-center text_box"}, "Some text goes here.");
-            return React.createElement('div', {className:"bg_image"}, textBox);
+            var pathName = window.location.pathname;
+            var quote = "";
+            var author = "";
+            if(pathName == "/plain-react.html")
+            {
+                quote = "Welcome to Misty Haven"
+            }
+            else if(pathName == "/Page1.html")
+            {
+                quote = "Fear is the most contagious disease you can imagine.";
+                author = "Warren Buffett";
+            }
+            else if(pathName == "/Page2.html")
+            {
+                quote = "Everyone knows you can't fight the FED. What you must do is to Jiu Jitsu the FED.";
+                author = "Mark Spitznagel";
+            }     
+            else if(pathName == "/Page3.html")
+            {
+                quote = "Past performance is the best predictor of success.";
+                author = "Jim Simons";
+            }    
+            else if(pathName == "/Page4.html")
+            {
+                quote = "It takes character to sit with all that cash and to do nothing. I didn't get top where I am by going after mediocre opportunities.";
+                author = "Charlie Munger";
+            }    
+            else if(pathName == "/Page5.html")
+            {
+                quote = "To know ten thousand things, know one well.";
+                author = "Miyamoto Musashi, Swordsman";
+            }             
+            else
+            {
+                quote = "Not Valid."
+                author = "Not Valid."
+            }                            
+            var textBox1 = React.createElement('p', {key: "quoteText", className: "text text-center text_box"}, quote);
+            var textBox2 = React.createElement('p', {key: "quoteAuthor", className: "text text-center"}, author);
+            return React.createElement('div', {className:"bg_image"}, [textBox1,textBox2]);
         }        
     }    
 
