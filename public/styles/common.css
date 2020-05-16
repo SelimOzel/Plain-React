@@ -6,3 +6,6 @@
   padding-bottom: 50%;
   background-size: cover;
 }
+
+.div_hover { background-color: #343A40; }
+.div_hover:hover { background-color: #C2CFDA; }
