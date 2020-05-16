@@ -5,7 +5,7 @@
   background-color: #3B4F61;
 }
 
-/* Background Image*/
+/* Background Image */
 .bg_image
 {
   /* Address */
@@ -17,7 +17,12 @@
   background-color: #3B4F61;
 }
 
-
 /* Division Hover */
 .div_hover 			{ background-color: #343A40; }
 .div_hover:hover 	{ background-color: #EEF1F4; }
+
+/* Text */
+.text_box
+{
+	padding-top: 8rem;
+}

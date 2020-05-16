@@ -40,12 +40,14 @@ window.onload = function()
     {
         render()
         {
-            return React.createElement('div', {className:"bg_image"});
+            var textBox = React.createElement('p', {className: "text-center text_box"}, "Some text goes here.");
+            return React.createElement('div', {className:"bg_image"}, textBox);
         }        
     }    
 
     // Modify background color
     document.body.classList.add('bg');
+    console.log(window.location.pathname);
 
     // Generate user interface with navigation-bar and mainview
     ReactDOM.render(
