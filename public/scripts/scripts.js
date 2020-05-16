@@ -40,10 +40,14 @@ window.onload = function()
     {
         render()
         {
-            return React.createElement('div', {className:"bg"}, []);
+            return React.createElement('div', {className:"bg_image"});
         }        
     }    
 
+    // Modify background color
+    document.body.classList.add('bg');
+
+    // Generate user interface with navigation-bar and mainview
     ReactDOM.render(
         [React.createElement(NavigationBar, {key: "navigationBar"}), React.createElement(Background, {key: "mainView"})],
         document.getElementById('root')

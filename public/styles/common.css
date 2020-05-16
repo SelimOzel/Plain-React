@@ -1,13 +1,22 @@
 /* Background */
 .bg 
 {
+  /* Paint full background with bottom color of the Background.png */
+  background-color: #3B4F61;
+}
+
+/* Background Image*/
+.bg_image
+{
   /* Address */
   background-image: url('../images/Background.png');
 
   /* Center and scale the image nicely */
   padding-bottom: 50%;
   background-size: cover;
+  background-color: #3B4F61;
 }
+
 
 /* Division Hover */
 .div_hover 			{ background-color: #343A40; }
