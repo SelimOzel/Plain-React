@@ -18,11 +18,11 @@ shared static this()
 {
 	auto router = new URLRouter;
 	router.get("/", &showHome);
-	router.get("/Buffet", staticRedirect("/Page1.html"));
-	router.get("/Spitznagel", staticRedirect("/Page2.html"));
-	router.get("/Simons", staticRedirect("/Page3.html"));
-	router.get("/Munger", staticRedirect("/Page4.html"));
-	router.get("/Musashi", staticRedirect("/Page5.html"));
+	router.get("/Buffet", staticRedirect("/Buffet.html"));
+	router.get("/Spitznagel", staticRedirect("/Spitznagel.html"));
+	router.get("/Simons", staticRedirect("/Simons.html"));
+	router.get("/Munger", staticRedirect("/Munger.html"));
+	router.get("/Musashi", staticRedirect("/Musashi.html"));
 	router.get("*", serveStaticFiles("public"));
 	router.get("*", serveStaticFiles("public/images"));
 	router.get("*", serveStaticFiles("public/styles"));

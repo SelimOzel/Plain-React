@@ -47,27 +47,27 @@ window.onload = function()
             {
                 quote = "Welcome to Misty Haven"
             }
-            else if(pathName == "/Page1.html")
+            else if(pathName == "/Buffet.html")
             {
                 quote = "Fear is the most contagious disease you can imagine.";
                 author = "Warren Buffett";
             }
-            else if(pathName == "/Page2.html")
+            else if(pathName == "/Spitznagel.html")
             {
                 quote = "Everyone knows you can't fight the FED. What you must do is to Jiu Jitsu the FED.";
                 author = "Mark Spitznagel";
             }     
-            else if(pathName == "/Page3.html")
+            else if(pathName == "/Simons.html")
             {
                 quote = "Past performance is the best predictor of success.";
                 author = "Jim Simons";
             }    
-            else if(pathName == "/Page4.html")
+            else if(pathName == "/Munger.html")
             {
                 quote = "It takes character to sit with all that cash and to do nothing. I didn't get top where I am by going after mediocre opportunities.";
                 author = "Charlie Munger";
             }    
-            else if(pathName == "/Page5.html")
+            else if(pathName == "/Musashi.html")
             {
                 quote = "To know ten thousand things, know one well.";
                 author = "Miyamoto Musashi, Swordsman";
