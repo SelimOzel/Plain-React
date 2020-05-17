@@ -85,7 +85,6 @@ window.onload = function()
 
     // Modify background color
     document.body.classList.add('bg');
-    console.log(window.location.pathname);
 
     // Generate user interface with navigation-bar and mainview
     ReactDOM.render(
