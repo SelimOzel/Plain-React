@@ -5,6 +5,7 @@ import vibe.http.fileserver;
 import vibe.http.router;
 import vibe.http.server;
 import vibe.web.rest;
+import vibe.inet.url : URL;
 import std.functional : toDelegate;
 
 // To have console access
@@ -32,8 +33,11 @@ class Quotes : IQuotes {
 
 shared static this()
 {
+	auto restsettings = new RestInterfaceSettings;
+	restsettings.baseURL = URL("http://127.0.0.1:8080/");
 
 	auto router = new URLRouter;
+	router.get("/Quotes.js", serveRestJSClient!IQuotes(restsettings));
 	router.get("/", &showHome);
 	router.get("/Buffet", staticRedirect("/Buffet.html"));
 	router.get("/Spitznagel", staticRedirect("/Spitznagel.html"));
@@ -43,6 +47,7 @@ shared static this()
 	router.get("*", serveStaticFiles("public"));
 	router.get("*", serveStaticFiles("public/images"));
 	router.get("*", serveStaticFiles("public/styles"));
+	router.registerRestInterface(new Quotes, restsettings);
 
 	auto settings = new HTTPServerSettings;
 	settings.bindAddresses = ["127.0.0.1"];

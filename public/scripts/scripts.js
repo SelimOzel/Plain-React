@@ -49,36 +49,51 @@ window.onload = function()
             }
             else if(pathName == "/Buffet.html")
             {
-                quote = "Fear is the most contagious disease you can imagine.";
-                author = "Warren Buffett";
+                IQuotes.getQuote(0, function (r) {
+                    // the result comes back asynchronously
+                    document.getElementById("quote").innerHTML = r[0];
+                    document.getElementById("author").innerHTML = r[1];
+                });
             }
             else if(pathName == "/Spitznagel.html")
             {
-                quote = "Everyone knows you can't fight the FED. What you must do is to Jiu Jitsu the FED.";
-                author = "Mark Spitznagel";
+                IQuotes.getQuote(1, function (r) {
+                    // the result comes back asynchronously
+                    document.getElementById("quote").innerHTML = r[0];
+                    document.getElementById("author").innerHTML = r[1];
+                });
             }     
             else if(pathName == "/Simons.html")
             {
-                quote = "Past performance is the best predictor of success.";
-                author = "Jim Simons";
+                IQuotes.getQuote(2, function (r) {
+                    // the result comes back asynchronously
+                    document.getElementById("quote").innerHTML = r[0];
+                    document.getElementById("author").innerHTML = r[1];
+                });
             }    
             else if(pathName == "/Munger.html")
             {
-                quote = "It takes character to sit with all that cash and to do nothing. I didn't get top where I am by going after mediocre opportunities.";
-                author = "Charlie Munger";
+                IQuotes.getQuote(3, function (r) {
+                    // the result comes back asynchronously
+                    document.getElementById("quote").innerHTML = r[0];
+                    document.getElementById("author").innerHTML = r[1];
+                });
             }    
             else if(pathName == "/Musashi.html")
             {
-                quote = "To know ten thousand things, know one well.";
-                author = "Miyamoto Musashi, Swordsman";
+                IQuotes.getQuote(4, function (r) {
+                    // the result comes back asynchronously
+                    document.getElementById("quote").innerHTML = r[0];
+                    document.getElementById("author").innerHTML = r[1];
+                });
             }             
             else
             {
                 quote = "Not Valid."
                 author = "Not Valid."
             }                            
-            var textBox1 = React.createElement('p', {key: "quoteText", className: "text text-center text_box"}, quote);
-            var textBox2 = React.createElement('p', {key: "quoteAuthor", className: "text text-center"}, author);
+            var textBox1 = React.createElement('p', {id: "quote", key: "quoteText", className: "text text-center text_box"}, quote);
+            var textBox2 = React.createElement('p', {id: "author", key: "quoteAuthor", className: "text text-center"}, author);
             return React.createElement('div', {className:"bg_image"}, [textBox1,textBox2]);
         }        
     }    
