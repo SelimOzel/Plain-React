@@ -26,3 +26,13 @@
 {
 	padding-top: 8rem;
 }
+
+/* Hyperlink with a font */
+a.rockwell {
+  font-family: "Rockwell";
+}
+
+/* Paragraph with a font */
+p.rockwell {
+  font-family: "Rockwell";
+}

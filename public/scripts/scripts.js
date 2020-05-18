@@ -14,7 +14,7 @@ window.onload = function()
 
         Header()
         {
-            var headerContent = React.createElement('a', {key: "navbarName", className:"navbar-brand", href: "/"}, 'Misty Haven');
+            var headerContent = React.createElement('a', {key: "navbarName", className:"rockwell navbar-brand", href: "/"}, 'Misty Haven');
             return React.createElement('div', {key: "navbarNameDiv", className:"navbar-header"}, headerContent);
         }
 
@@ -31,7 +31,7 @@ window.onload = function()
 
         SingleContent(linkName_IN, linkReference_IN)
         {
-            var link1 = React.createElement('a', {key: linkReference_IN, className:"nav-link", href: linkReference_IN}, linkName_IN);
+            var link1 = React.createElement('a', {key: linkReference_IN, className:"rockwell nav-link", href: linkReference_IN}, linkName_IN);
             return React.createElement('li', {key: linkName_IN, className:"py-4 pr-5 pl-5 nav-item div_hover"}, link1);
         }
     }
@@ -92,8 +92,8 @@ window.onload = function()
                 quote = "Not Valid."
                 author = "Not Valid."
             }                            
-            var textBox1 = React.createElement('p', {id: "quote", key: "quoteText", className: "text text-center text_box"}, quote);
-            var textBox2 = React.createElement('p', {id: "author", key: "quoteAuthor", className: "text text-center"}, author);
+            var textBox1 = React.createElement('p', {id: "quote", key: "quoteText", className: "rockwell text text-center text_box"}, quote);
+            var textBox2 = React.createElement('p', {id: "author", key: "quoteAuthor", className: "rockwell text text-center"}, author);
             return React.createElement('div', {className:"bg_image"}, [textBox1,textBox2]);
         }        
     }    
